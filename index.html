@@ -119,7 +119,11 @@
   .pillar-card:nth-child(3){top:19vh}
   .pillar-card:nth-child(4){top:22.5vh}
   .pillar-card:last-child{margin-bottom:0}
-  @media(max-width:640px){.pillar-card:nth-child(1){top:9vh}.pillar-card:nth-child(2){top:12vh}.pillar-card:nth-child(3){top:15vh}.pillar-card:nth-child(4){top:18vh}}
+  /* mobile/tablet: sem deck empilhado — cada pilar é um cartão normal, sem esmaecer */
+  @media(max-width:760px){
+    .pillar-card{position:relative!important;top:auto!important;opacity:1!important;transform:none!important;
+      margin-bottom:18px;box-shadow:0 14px 40px -22px rgba(0,0,0,.6)}
+  }
   .sidenav{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:80;display:flex;flex-direction:column;gap:14px}
   .sidenav a{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22);position:relative;transition:all .35s}
   .sidenav a.on{background:var(--gold);height:26px;border-radius:6px}
@@ -906,7 +910,7 @@
   /* ---------- PILARES: cards empilhados (sticky stack) ---------- */
   (function(){
     var cards=gsap.utils.toArray('#pillarsTrack .pillar-card');
-    if(!cards.length || reduce) return;
+    if(!cards.length || reduce || window.innerWidth<=760) return;
     cards.forEach(function(card,i){
       if(i < cards.length-1){
         gsap.to(card,{scale:.94,opacity:.6,ease:'none',
