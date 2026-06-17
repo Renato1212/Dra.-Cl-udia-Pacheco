@@ -335,6 +335,33 @@
   .cta-band h3{font-size:clamp(1.3rem,2.6vw,1.9rem);max-width:24ch}
   @keyframes ctapulse{0%,100%{box-shadow:0 8px 30px -10px rgba(201,163,104,.5)}50%{box-shadow:0 12px 40px -8px rgba(201,163,104,.95)}}
   .offer-card p+p{margin-top:13px}
+
+  /* olhos / nova oportunidade + resultados reais */
+  .opp{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;align-items:start}
+  @media(max-width:760px){.opp{grid-template-columns:1fr}}
+  .opp .card{display:flex;flex-direction:column;gap:12px;height:100%}
+  .opp .tag{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+  .opp .old .tag{color:var(--muted)}
+  .opp .new .tag{color:var(--gold-2)}
+  .opp h3{font-size:clamp(1.25rem,2.2vw,1.6rem)}
+  .opp .new{background:linear-gradient(160deg,rgba(201,163,104,.16),rgba(224,168,158,.06))}
+  .opp .mech-list{list-style:none;display:grid;gap:13px;margin-top:4px}
+  .opp .mech-list li{display:flex;gap:12px;align-items:flex-start;color:#DBD0BF}
+  .opp .mech-list svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--gold-2)}
+  .opp .mech-list b{color:var(--text)}
+  .results{margin-top:50px}
+  .results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px}
+  @media(max-width:680px){.results-grid{grid-template-columns:1fr}}
+  figure.result{position:relative;margin:0;aspect-ratio:4/3;border:1px solid var(--line-2);border-radius:var(--rad);overflow:hidden;background:rgba(255,255,255,.025)}
+  figure.result img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1}
+  figure.result .ph{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:22px;color:var(--muted)}
+  figure.result .ph svg{width:30px;height:30px;opacity:.6}
+  figure.result .ph small{font-size:.72rem;color:var(--dim);font-family:'Space Grotesk',sans-serif;letter-spacing:.04em}
+  figure.result .ba{position:absolute;top:12px;left:12px;right:12px;z-index:2;display:flex;justify-content:space-between;pointer-events:none}
+  figure.result .ba span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;padding:5px 11px;border-radius:100px;backdrop-filter:blur(6px)}
+  .ba .antes{background:rgba(20,15,11,.62);color:var(--text)}
+  .ba .depois{background:rgba(201,163,104,.9);color:#241a10}
+  .results .note{font-size:.82rem;color:var(--muted);margin-top:18px;max-width:64ch}
   /* respiro de leitura em ecrãs pequenos — evita blocos de texto */
   @media(max-width:640px){
     body{line-height:1.64}
@@ -559,6 +586,62 @@
         <p>Não é um efeito que aparece num dia e some no outro — constrói-se com manutenções espaçadas, ao longo do tempo, num rosto que envelhece bem em vez de parar no tempo.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- OLHOS / PÉS DE GALINHA — nova oportunidade + resultados reais -->
+<section class="section wrap" id="olhos" data-reveal data-nav="Resultados">
+  <div class="idx"><span class="num">✦</span><span class="line"></span><span class="kicker">A prova está à volta dos olhos</span></div>
+  <h2 class="display mask-block" style="font-size:clamp(1.8rem,3.8vw,2.8rem);max-width:18ch">Pés de galinha: onde o Botox de sempre obriga você a <span class="grad-text">escolher.</span></h2>
+  <p style="margin-top:18px;max-width:62ch">As rugas no canto dos olhos são as mais teimosas de todas — e não é por acaso. Elas nascem exactamente do mesmo músculo que faz você sorrir.</p>
+  <p style="margin-top:14px;max-width:62ch">Por isso, à volta dos olhos, o Botox tradicional coloca-a perante uma escolha cruel: ou apaga a ruga, ou mantém o sorriso. Quase nunca os dois. É exactamente aqui que se vê a diferença entre um Botox “melhorado” e um Botox <b style="color:var(--text)">diferente</b>.</p>
+
+  <div class="opp">
+    <div class="card old" data-reveal>
+      <span class="tag">O caminho antigo · mais dose</span>
+      <h3 class="display">Apaga a ruga — e trava o sorriso</h3>
+      <p>Para vencer um pé de galinha fundo, o Botox de sempre faz a única coisa que sabe: aumenta a dose e paralisa o músculo à volta do olho. A ruga até suaviza — mas o sorriso vai junto. O canto do olho deixa de enrugar quando você ri, o olhar fica parado, e nasce aquele ar “feito”.</p>
+      <p>Mais dose nunca foi a solução. Era o problema.</p>
+    </div>
+    <div class="card new glow" data-reveal data-tilt>
+      <span class="tag">A nova oportunidade · outro mecanismo</span>
+      <h3 class="display grad-text">Apaga a ruga — e guarda o sorriso</h3>
+      <p>O Botox MCP não é o mesmo procedimento feito com mais cuidado. É outro mecanismo. Em vez de uma dose grande que desliga o músculo, mapeia o contorno do olho e aplica micro-doses precisas — medidas ao décimo, mais à superfície, onde a ruga realmente mora — sem tocar na força que faz você sorrir.</p>
+      <ul class="mech-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Dose ao décimo, não “a olho”:</b> uma seringa por aplicação, com a micro-dose já medida ponto a ponto.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Trata a pele, não o sorriso:</b> micro-doses superficiais suavizam a linha em repouso sem desligar o músculo que faz você rir.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Mapa antes da agulha:</b> define-se que pontos do contorno tratar — e que músculos da expressão ficam intactos.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>O resultado:</b> o canto do olho descansado em repouso — e o pé de galinha de volta só quando você ri de verdade.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="results">
+    <h3 class="display" style="font-size:clamp(1.3rem,2.4vw,1.8rem);max-width:20ch">Resultados reais — pés de galinha suavizados, <span class="grad-text">sorriso preservado</span></h3>
+    <p style="margin-top:10px;max-width:60ch">Repare no contorno do olho em cada par: a ruga funda em repouso suaviza — e, ainda assim, continua a ser o mesmo sorriso.</p>
+    <div class="results-grid">
+      <figure class="result" data-reveal>
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Foto de resultado<small>assets/resultados/olhos-1.jpg</small></div>
+        <img src="assets/resultados/olhos-1.jpg" alt="Antes e depois — pés de galinha suavizados com o sorriso preservado" loading="lazy" onerror="this.remove()">
+        <div class="ba"><span class="antes">Antes</span><span class="depois">Depois</span></div>
+      </figure>
+      <figure class="result" data-reveal>
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Foto de resultado<small>assets/resultados/olhos-2.jpg</small></div>
+        <img src="assets/resultados/olhos-2.jpg" alt="Antes e depois — rugas dos olhos suavizadas mantendo a expressão" loading="lazy" onerror="this.remove()">
+        <div class="ba"><span class="antes">Antes</span><span class="depois">Depois</span></div>
+      </figure>
+      <figure class="result" data-reveal>
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Foto de resultado<small>assets/resultados/olhos-3.jpg</small></div>
+        <img src="assets/resultados/olhos-3.jpg" alt="Antes e depois — contorno do olho descansado, sorriso intacto" loading="lazy" onerror="this.remove()">
+        <div class="ba"><span class="antes">Antes</span><span class="depois">Depois</span></div>
+      </figure>
+      <figure class="result" data-reveal>
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Foto de resultado<small>assets/resultados/olhos-4.jpg</small></div>
+        <img src="assets/resultados/olhos-4.jpg" alt="Antes e depois — pés de galinha profundos suavizados, expressão preservada" loading="lazy" onerror="this.remove()">
+        <div class="ba"><span class="antes">Antes</span><span class="depois">Depois</span></div>
+      </figure>
+    </div>
+    <p class="note">Imagens reais de pacientes, partilhadas com autorização. Cada rosto responde de forma diferente — os resultados variam de pessoa para pessoa.</p>
   </div>
 </section>
 
