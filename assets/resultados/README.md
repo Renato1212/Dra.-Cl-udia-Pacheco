@@ -3,29 +3,31 @@
 A secção `#olhos` do `index.html` mostra 4 pares **antes/depois** do contorno
 dos olhos. Cada imagem é um composto **antes (esquerda) → depois (direita)**.
 
-Coloque os 4 ficheiros nesta pasta, com EXACTAMENTE estes nomes:
+## Ficheiros em uso (já processados a partir do Google Drive › "Botox MCP")
 
-| Ficheiro        | Foto enviada (na ordem em que foram partilhadas) |
-|-----------------|--------------------------------------------------|
-| `olhos-1.jpg`   | 1ª — senhora loira, perfil a sorrir              |
-| `olhos-2.jpg`   | 2ª — senhora de cabelo escuro, perfil a sorrir   |
-| `olhos-3.jpg`   | 3ª — composto antes/depois (toca de proteção)    |
-| `olhos-4.jpg`   | 4ª — composto antes/depois (pestanas)            |
+| Ficheiro      | Origem (Drive)            | Tratamento aplicado                          |
+|---------------|---------------------------|----------------------------------------------|
+| `olhos-1.jpg` | IMG-20230818-WA0009.jpg   | recorte 3:2 + realce                          |
+| `olhos-2.jpg` | IMG-20230621-WA0016.jpg   | recorte 3:2 + realce                          |
+| `olhos-3.jpg` | IMG-20200719-WA0021.jpg   | barra/ícones do telemóvel removidos + 3:2     |
+| `olhos-4.jpg` | IMG-20200719-WA0008.jpg   | barra/ícones do telemóvel removidos + 3:2     |
 
-## Notas
-- Enquanto os ficheiros não existirem, a página mostra um espaço reservado
-  elegante (não fica "partido"). Assim que os ficheiros forem adicionados com
-  estes nomes, as fotos aparecem automaticamente.
-- As fotos 3 e 4 são **capturas de ecrã do telemóvel** (têm a barra de estado e
-  os botões da galeria). O enquadramento da página recorta o centro, mas para
-  o melhor resultado **corte a barra de cima e os ícones de baixo** antes de
-  guardar, deixando só o par de rostos antes/depois.
-- Formato recomendado: JPG, lado maior ~1600px, qualidade ~80%.
-- As etiquetas "Antes" / "Depois" já são desenhadas pela página sobre cada
-  metade — não é preciso escrevê-las na imagem.
+Processamento: recorte automático da interface do telemóvel (capturas de ecrã),
+enquadramento uniforme 3:2 centrado nos olhos, auto-contraste, leve reforço de
+cor/nitidez, JPG progressivo (~q88). As etiquetas "Antes/Depois" são desenhadas
+pela página — não estão gravadas na imagem.
+
+### Para substituir/atualizar
+Basta colocar um JPG com o mesmo nome (`olhos-1.jpg` … `olhos-4.jpg`). Se um
+ficheiro faltar, a página mostra um espaço reservado elegante em vez de partir.
+
+### Outras fotos na pasta do Drive (não usadas aqui)
+A pasta tem ainda resultados de **sorriso/dentes** e de **rosto de frente**
+(IMG-…-WA0399, WA0001, WA0019), que não são da zona dos olhos. Ficam disponíveis
+caso queira uma galeria de resultados mais geral noutra secção.
 
 ## Atenção regulatória (rever antes de publicar)
 A publicidade com "antes e depois" de toxina botulínica tem restrições no
 Brasil (CFM / Anvisa) e em Portugal (Ordem dos Médicos / ERS / INFARMED).
-Garanta o **consentimento por escrito** de cada paciente e valide a
-publicação com a sua assessoria jurídica/clínica em cada país.
+Garanta o **consentimento por escrito** de cada paciente e valide a publicação
+com a sua assessoria jurídica/clínica em cada país.
